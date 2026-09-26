@@ -1,0 +1,17 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="48" height="48" rx="12" fill="#121316"/>
+  <polygon
+    points="24,6 41,16 41,32 24,42 7,32 7,16"
+    stroke="#FAF9F5"
+    stroke-width="1.8"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M24 11L34 31H28L24 22L20 31H14L24 11Z"
+    fill="#FAF9F5"
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+  />
+  <polygon points="24,16 27.5,24 20.5,24" fill="#121316" />
+  <circle cx="24" cy="28" r="1.5" fill="#10B981" />
+</svg>
