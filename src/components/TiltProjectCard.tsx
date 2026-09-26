@@ -95,9 +95,25 @@ export default function TiltProjectCard({
         </div>
 
         <div className="absolute top-3 right-3 z-10">
-          <div className="w-8 h-8 rounded-full bg-white/95 border border-stone-200 flex items-center justify-center text-stone-800 group-hover:bg-[#121316] group-hover:text-white transition-all shadow-sm">
-            <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-          </div>
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => {
+                e.stopPropagation();
+                onAudio?.(700, "sine");
+              }}
+              title="Open Live Website"
+              className="w-8 h-8 rounded-full bg-white/95 border border-stone-200 flex items-center justify-center text-stone-800 hover:bg-[#121316] hover:text-white transition-all shadow-sm"
+            >
+              <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          ) : (
+            <div className="w-8 h-8 rounded-full bg-white/95 border border-stone-200 flex items-center justify-center text-stone-800 group-hover:bg-[#121316] group-hover:text-white transition-all shadow-sm">
+              <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </div>
+          )}
         </div>
 
         <div className="absolute bottom-3 right-3 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

@@ -41,7 +41,7 @@ export default function ProjectsSection({
 
           {/* Filter Pills */}
           <div className="flex flex-wrap items-center gap-2 text-xs font-mono">
-            {["All", "Frontend", "Backend", "3D WebGL"].map((filter) => (
+            {["All", "Frontend", "Backend", "Full-Stack"].map((filter) => (
               <button
                 key={filter}
                 onClick={() => {

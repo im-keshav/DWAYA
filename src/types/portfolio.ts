@@ -17,6 +17,7 @@ export interface Project {
   description: string;
   image: string;
   stats: ProjectStats;
+  liveUrl?: string;
 }
 
 export interface Capability {

@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { X } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 import { Project } from "@/types/portfolio";
 
 interface ProjectModalProps {
@@ -74,10 +74,27 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
           </div>
         </div>
 
-        <div className="flex justify-end pt-2">
+        <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+          {project.liveUrl ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-stone-900 bg-[#121316] text-[#FAF9F5] text-xs font-mono font-medium hover:bg-stone-800 transition-all group shadow-sm"
+            >
+              <span>
+                {project.liveUrl.includes("github.com")
+                  ? "View GitHub Repository"
+                  : "Launch Live Website"}
+              </span>
+              <ExternalLink className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </a>
+          ) : (
+            <div />
+          )}
           <button
             onClick={onClose}
-            className="px-6 py-2.5 rounded-full bg-[#121316] text-[#FAF9F5] text-xs font-medium uppercase tracking-wider hover:bg-stone-800 transition-colors"
+            className="px-6 py-2.5 rounded-full border border-stone-200 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-medium uppercase tracking-wider transition-colors ml-auto"
           >
             Close Inspector
           </button>
