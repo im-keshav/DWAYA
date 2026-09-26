@@ -1,8 +1,8 @@
 import { Project, Capability, ServiceItem } from "@/types/portfolio";
 
 export const WHATSAPP_CONFIG = {
-  number: "919876543210", // International format without +
-  displayNumber: "+91 98765 43210",
+  number: "919466477966", // International format without +
+  displayNumber: "+91 94664 77966",
   defaultMessage:
     "Hello Dwaya! I would like to discuss a frontend & backend website project.",
 };
