@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import CustomCursor from "@/components/CustomCursor";
+import Preloader from "@/components/Preloader";
 import ThreeBackdrop from "@/components/ThreeBackdrop";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -77,6 +78,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#FAF9F5] text-[#121316] selection:bg-[#121316] selection:text-[#FAF9F5] font-sans antialiased relative overflow-x-hidden">
+      {/* 360-Degree Rotating Brand Logo & Circular Preloader */}
+      <Preloader />
+
       {/* Dynamic Cursor Follower */}
       <CustomCursor />
 

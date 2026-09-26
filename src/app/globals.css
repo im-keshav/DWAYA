@@ -62,3 +62,34 @@ body {
 .animate-fade-in {
   animation: fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+@keyframes spinClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCounterClockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-spin-clockwise-slow {
+  animation: spinClockwise 6s linear infinite;
+}
+
+.animate-spin-counter-slow {
+  animation: spinCounterClockwise 10s linear infinite;
+}
+
+.animate-spin-logo {
+  animation: spinClockwise 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
